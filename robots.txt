@@ -1,0 +1,7 @@
+﻿User-agent: *
+Allow: /
+
+Sitemap: https://www.shrikaa.co.in/sitemap.xml
+
+# Disallow server-side paths (none for static site, but good hygiene)
+Disallow: /assets/

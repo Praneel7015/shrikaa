@@ -1,0 +1,256 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Results &amp; Achievements &ndash; Shrikaa CET, NEET &amp; JEE Success Stories</title>
+  <meta name="description" content="See Shrikaa's proven track record &mdash; CET rank holders, NEET qualifiers, and students placed in top engineering and medical colleges across Karnataka." />
+  <link rel="canonical" href="https://www.shrikaa.co.in/results" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <style>
+    /* ── CET rank grid ─────────────────────────────── */
+    .cet-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+      gap: var(--sp-4);
+      margin-top: var(--sp-10);
+    }
+    .cet-card {
+      border-radius: var(--r-md);
+      overflow: hidden;
+      background: var(--chalk);
+      border: 1px solid var(--border-light);
+      transition: transform 0.28s var(--ease), box-shadow 0.28s var(--ease);
+      cursor: default;
+    }
+    .cet-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+    .cet-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ── College placement row ─────────────────────── */
+    .college-row {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: var(--sp-5);
+      margin-top: var(--sp-10);
+    }
+    .college-card {
+      border-radius: var(--r-md);
+      overflow: hidden;
+      background: var(--white);
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-xs);
+      transition: transform 0.28s var(--ease), box-shadow 0.28s var(--ease);
+    }
+    .college-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+    .college-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    @media (max-width: 900px) {
+      .college-row { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 560px) {
+      .cet-grid { grid-template-columns: repeat(2, 1fr); gap: var(--sp-3); }
+      .college-row { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav nav--light" id="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo"><img src="assets/images/logo.png" alt="Shrikaa" class="nav__logo-img" /><span class="nav__logo-text">Shrikaa</span></a>
+      <div class="nav__links">
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="about.html" class="nav__link">About</a>
+        <a href="academics.html" class="nav__link">Courses</a>
+        <a href="results.html" class="nav__link nav__link--active">Results</a>
+        <a href="admissions.html" class="nav__link">Admissions</a>
+        <a href="contact.html" class="nav__link">Contact</a>
+      </div>
+      <div class="nav__cta"><a href="https://www.askshrikaa.com" class="btn btn--white btn--nav-cta" target="_blank" rel="noopener">AskShrikaa</a></div>
+      <button class="nav__burger" id="nav-burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-mobile"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav__mobile" id="nav-mobile">
+      <a href="index.html" class="nav__mobile-link">Home</a>
+      <a href="about.html" class="nav__mobile-link">About</a>
+      <a href="academics.html" class="nav__mobile-link">Courses</a>
+      <a href="results.html" class="nav__mobile-link">Results</a>
+      <a href="admissions.html" class="nav__mobile-link">Admissions</a>
+      <a href="contact.html" class="nav__mobile-link">Contact</a>
+      <a href="https://www.askshrikaa.com" class="btn btn--primary nav__mobile-cta" target="_blank" rel="noopener">AskShrikaa &rarr;</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <header class="page-header">
+      <div class="container page-header__inner">
+        <span class="eyebrow">Proven Track Record</span>
+        <h1>Our Results</h1>
+        <p>Three years of results that speak for themselves &mdash; CET rank holders, NEET qualifiers, and students in India&rsquo;s top colleges.</p>
+      </div>
+    </header>
+
+    <!-- STATS -->
+    <div class="stats-band" role="region" aria-label="Achievement statistics">
+      <div class="container">
+        <div class="stats-band__inner">
+          <div class="stat-item reveal">
+            <span class="stat-item__num"><span class="counter" data-target="1">0</span>K+</span>
+            <p class="stat-item__label">Students in Top Colleges</p>
+          </div>
+          <div class="stat-item reveal">
+            <span class="stat-item__num"><span class="counter" data-target="19">0</span>+</span>
+            <p class="stat-item__label">CET Top Ranks</p>
+          </div>
+          <div class="stat-item reveal">
+            <span class="stat-item__num"><span class="counter" data-target="3">0</span>+</span>
+            <p class="stat-item__label">Years of Results</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OUR STUDENTS IN TOP COLLEGES -->
+    <section class="section bg-white" aria-labelledby="colleges-heading">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <span class="eyebrow">Where our students go</span>
+          <h2 class="display-md" id="colleges-heading" style="margin-top:var(--sp-3);">Our Students in Top Colleges</h2>
+          <p class="lead" style="max-width:580px;margin-inline:auto;margin-top:var(--sp-4);">
+            Shrikaa students have secured seats in IITs, NITs, and some of India&rsquo;s most sought-after institutions.
+          </p>
+        </div>
+        <div class="college-row reveal-group">
+          <div class="college-card reveal">
+            <img src="assets/images/results/college-01-ankit-kumar.png" alt="Ankit Kumar A &ndash; MS Ramaiah University of Applied Science, AI &amp; ML" loading="lazy" />
+          </div>
+          <div class="college-card reveal">
+            <img src="assets/images/results/college-02-ayush-kumar-poddar.png" alt="Ayush Kumar Poddar &ndash; IIT Roorkee" loading="lazy" />
+          </div>
+          <div class="college-card reveal">
+            <img src="assets/images/results/college-03-navaneet-murali.png" alt="Navaneet Murali &ndash; NIT Surathkal" loading="lazy" />
+          </div>
+          <div class="college-card reveal">
+            <img src="assets/images/results/college-04-arun-kumar.png" alt="Arun Kumar &ndash; Presidency University" loading="lazy" />
+          </div>
+          <div class="college-card reveal">
+            <img src="assets/images/results/college-05-mayur-raghunath.png" alt="Mayur Raghunath &ndash; K S Hegde Medical Academy" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CET RANK CARDS -->
+    <section class="section bg-warm" aria-labelledby="cet-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Student Achievements</span>
+          <h2 class="display-md" id="cet-heading" style="margin-top:var(--sp-3);">CET Results</h2>
+          <p class="lead" style="max-width:580px;margin-top:var(--sp-4);">
+            Every rank card here represents a student who worked hard and a teacher who believed in them.
+          </p>
+        </div>
+        <div class="cet-grid">
+          <div class="cet-card reveal"><img src="assets/images/results/cet-01-rank579-mohan-kumar-tm.png" alt="Mohan Kumar TM &ndash; CET Rank 579" loading="lazy" /></div>
+          <div class="cet-card reveal"><img src="assets/images/results/cet-02-rank1308-chaitanya-ram-prasad.png" alt="Chaitanya Ram Prasad &ndash; CET Rank 1308" loading="lazy" /></div>
+          <div class="cet-card reveal"><img src="assets/images/results/cet-03-rank1795-punith-ks.png" alt="Punith KS &ndash; CET Rank 1795" loading="lazy" /></div>
+          <div class="cet-card reveal"><img src="assets/images/results/cet-04-rank2447-krupasham-jadhav.png" alt="Krupasham Jadhav &ndash; CET Rank 2447" loading="lazy" /></div>
+          <div class="cet-card reveal"><img src="assets/images/results/cet-05-rank2639-siddhalingaiah-swamy.png" alt="Siddhalingaiah Swamy BK &ndash; CET Rank 2639" loading="lazy" /></div>
+          <div class="cet-card reveal"><img src="assets/images/results/cet-06-rank4501-vn-swamy.png" alt="VN Swamy &ndash; CET Rank 4501" loading="lazy" /></div>
+          <div class="cet-card reveal"><img src="assets/images/results/cet-07-rank5075-palla-thejaswar-reddy.png" alt="Palla Thejaswar Reddy &ndash; CET Rank 5075" loading="lazy" /></div>
+          <div class="cet-card reveal"><img src="assets/images/results/cet-08-rank8587-pavan-kumar-mp.png" alt="Pavan Kumar MP &ndash; CET Rank 8587" loading="lazy" /></div>
+          <div class="cet-card reveal"><img src="assets/images/results/cet-09-rank8755-apeksha.png" alt="Apeksha &ndash; CET Rank 8755" loading="lazy" /></div>
+          <div class="cet-card reveal"><img src="assets/images/results/cet-10-rank8888-pavan-kumar-km.png" alt="Pavan Kumar KM &ndash; CET Rank 8888" loading="lazy" /></div>
+          <div class="cet-card reveal"><img src="assets/images/results/cet-11-rank9134-rudresh-m.png" alt="Rudresh M &ndash; CET Rank 9134" loading="lazy" /></div>
+          <div class="cet-card reveal"><img src="assets/images/results/cet-12-rank9513-kushal-n.png" alt="Kushal N &ndash; CET Rank 9513" loading="lazy" /></div>
+          <div class="cet-card reveal"><img src="assets/images/results/cet-13-rank14082-pooja.png" alt="Pooja &ndash; CET Rank 14082" loading="lazy" /></div>
+          <div class="cet-card reveal"><img src="assets/images/results/cet-14-rank16882-athul.png" alt="Athul &ndash; CET Rank 16882" loading="lazy" /></div>
+          <div class="cet-card reveal"><img src="assets/images/results/cet-15-rank17998-pruthviraj-sm.png" alt="Pruthviraj SM &ndash; CET Rank 17998" loading="lazy" /></div>
+          <div class="cet-card reveal"><img src="assets/images/results/cet-16-rank19233-pavan-kumar-m.png" alt="Pavan Kumar M &ndash; CET Rank 19233" loading="lazy" /></div>
+          <div class="cet-card reveal"><img src="assets/images/results/cet-17-rank20382-mahesh.png" alt="Mahesh &ndash; CET Rank 20382" loading="lazy" /></div>
+          <div class="cet-card reveal"><img src="assets/images/results/cet-18-rank20411-sathyapriya.png" alt="Sathyapriya &ndash; CET Rank 20411" loading="lazy" /></div>
+          <div class="cet-card reveal"><img src="assets/images/results/cet-19-rank22721-anvitha.png" alt="Anvitha &ndash; CET Rank 22721" loading="lazy" /></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section bg-white" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <span class="eyebrow">In their own words</span>
+          <h2 class="display-md" id="testimonials-heading" style="margin-top:var(--sp-3);">What students say</h2>
+        </div>
+        <div class="grid-3 reveal-group">
+          <div class="quote-card reveal">
+            <p class="quote-card__text">&ldquo;Shrikaa helped me crack NEET while my family was going through financial hardship. The fees were genuinely affordable and the faculty never made me feel less deserving.&rdquo;</p>
+            <span class="quote-card__author">&mdash; Divya R., NEET 2024 Qualifier</span>
+          </div>
+          <div class="quote-card reveal">
+            <p class="quote-card__text">&ldquo;The CET preparation was thorough and the mock tests were spot-on. I got into BMS College of Engineering on my first attempt.&rdquo;</p>
+            <span class="quote-card__author">&mdash; Karthik M., CET 2024 &middot; BMS College of Engineering</span>
+          </div>
+          <div class="quote-card reveal">
+            <p class="quote-card__text">&ldquo;I was worried I couldn&rsquo;t afford good coaching. Shrikaa proved that affordable and quality are not opposites.&rdquo;</p>
+            <span class="quote-card__author">&mdash; Sneha P., CET 2023 &middot; MSRIT</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section--sm bg-warm">
+      <div class="container">
+        <div class="cta-banner reveal reveal--scale">
+          <div class="cta-banner__text">
+            <h2>Your result could be the next one here.</h2>
+            <p>Admissions open for 2025&ndash;26. Join the students who chose to back themselves.</p>
+          </div>
+          <div class="cta-banner__action">
+            <a href="admissions.html" class="btn btn--outline-light btn--lg">Apply Now &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand"><div class="footer__logo"><img src="assets/images/logo.png" alt="Shrikaa" class="footer__logo-img" /><span class="footer__logo-text">Shrikaa</span></div><p>Affordable, high-quality coaching for 1st &amp; 2nd PUC, CET, NEET, and JEE students in Bengaluru.</p><div class="footer__social"><a href="#" class="footer__social-link" aria-label="Instagram">&#9426;</a><a href="#" class="footer__social-link" aria-label="YouTube">&#9654;</a><a href="#" class="footer__social-link" aria-label="Facebook">&#9425;</a></div></div>
+        <div class="footer__col"><h4>Quick Links</h4><nav class="footer__links"><a href="about.html">About Us</a><a href="academics.html">Courses</a><a href="results.html">Results</a><a href="admissions.html">Admissions</a><a href="contact.html">Contact</a></nav></div>
+        <div class="footer__col"><h4>Programs</h4><nav class="footer__links"><a href="academics.html#physics">Physics</a><a href="academics.html#chemistry">Chemistry</a><a href="academics.html#mathematics">Mathematics</a><a href="academics.html#biology">Biology</a><a href="academics.html#cet">CET Prep</a><a href="academics.html#neet">NEET Prep</a></nav></div>
+        <div class="footer__col"><h4>Contact</h4><address style="font-style:normal;"><div class="footer__contact-item"><span>&#9672;</span><span>Gopal Krishna Complex, 45/3, Residency Road, Bengaluru 560025</span></div><div class="footer__contact-item"><span>&#9990;</span><a href="tel:+919902316289">+91 99023 16289</a></div><div class="footer__contact-item"><span>&#9993;</span><a href="mailto:write2shrikaa@gmail.com">write2shrikaa@gmail.com</a></div></address></div>
+      </div>
+      <div class="footer__bottom"><p>&copy; 2026 Shrikaa Intellect Innovations. All rights reserved.</p><div class="footer__legal"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div></div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/919902316289" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M16 2C8.268 2 2 8.268 2 16c0 2.47.67 4.79 1.84 6.78L2 30l7.42-1.81A14 14 0 0 0 16 30c7.732 0 14-6.268 14-14S23.732 2 16 2zm7.21 19.44c-.3.84-1.76 1.6-2.42 1.65-.62.05-1.2.28-4.04-.84-3.38-1.34-5.56-4.8-5.73-5.02-.17-.22-1.38-1.83-1.38-3.49s.87-2.48 1.18-2.82c.3-.33.66-.42.88-.42.22 0 .44.01.63.01.2 0 .47-.08.74.56.28.66.95 2.3 1.04 2.47.09.17.14.37.03.6-.11.22-.17.36-.33.55-.17.2-.35.44-.5.59-.17.17-.34.35-.15.68.2.33.87 1.44 1.87 2.33 1.28 1.14 2.36 1.5 2.7 1.66.33.17.53.14.72-.08.2-.22.84-.99 1.07-1.32.22-.33.44-.28.74-.17.3.11 1.9.9 2.23 1.06.33.17.55.25.63.39.08.14.08.8-.22 1.65z"/>
+    </svg>
+  </a>
+  <script src="assets/js/nav.js" defer></script>
+  <script src="assets/js/counter.js" defer></script>
+  <script src="assets/js/reveal.js" defer></script>
+</body>
+</html>

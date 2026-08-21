@@ -1,0 +1,18 @@
+# ── AskShrikaa sub-projects (separate sites, not part of this repo) ──
+askshrikaa-landing/
+askshrikaa-login/
+
+# ── Internal audit / dev notes ────────────────────────────────────────
+AUDIT_REPORT.md
+
+# ── OS / editor noise ─────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# ── Node (if ever used locally) ───────────────────────────────────────
+node_modules/
