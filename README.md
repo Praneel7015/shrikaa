@@ -65,6 +65,6 @@ assets/
 
 ## Contact
 
-**Shrikaa Intellect Innovations**  
-Gopal Krishna Complex, 45/3, Residency Road, Bengaluru 560025  
-+91 99023 16289 · write2shrikaa@gmail.com
+**Shrikaa Intellect Innovations**
+276/D, Jayanagar 8th block bengaluru
+7026386563 · askshrikaa@gmail.com
