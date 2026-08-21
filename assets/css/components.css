@@ -676,6 +676,63 @@
 }
 
 /* =================================================================
+   SPONSOR CARD
+   ================================================================= */
+.sponsor-card {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--sp-6) var(--sp-10);
+  border: 1px solid var(--border-light);
+  border-radius: var(--r-lg);
+  background: var(--warm-white);
+  opacity: 0.75;
+  transition: opacity 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  text-decoration: none;
+}
+.sponsor-card:hover {
+  opacity: 1;
+  border-color: var(--border);
+  box-shadow: var(--shadow-sm);
+}
+
+/* =================================================================
+   FLOATING ASKSHRIKAA BUTTON
+   ================================================================= */
+.ask-float {
+  position: fixed;
+  bottom: 92px; /* sits above WhatsApp button */
+  right: 28px;
+  z-index: 999;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--white);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.18), 0 2px 8px rgba(0,0,0,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  overflow: hidden;
+  transition: transform 0.2s cubic-bezier(0.22,1,0.36,1), box-shadow 0.2s ease;
+}
+.ask-float:hover {
+  transform: scale(1.1) translateY(-2px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.22), 0 2px 8px rgba(0,0,0,0.14);
+}
+.ask-float img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+@media (max-width: 480px) {
+  .ask-float { bottom: 78px; right: 18px; width: 48px; height: 48px; }
+  .ask-float img { width: 34px; height: 34px; }
+}
+
+/* =================================================================
    FLOATING WHATSAPP BUTTON
    ================================================================= */
 .wa-float {
