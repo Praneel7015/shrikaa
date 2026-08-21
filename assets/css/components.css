@@ -5,7 +5,15 @@
   background: transparent;
   border-bottom: 1px solid transparent;
   backdrop-filter: blur(0px);
-  transition: background var(--dur) var(--ease), border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease), backdrop-filter var(--dur) var(--ease);
+  transition: background var(--dur) var(--ease),
+              border-color var(--dur) var(--ease),
+              box-shadow var(--dur) var(--ease),
+              backdrop-filter var(--dur) var(--ease),
+              transform 0.32s cubic-bezier(0.4,0,0.2,1);
+}
+/* Hide nav — slides up out of view */
+.nav--hidden {
+  transform: translateY(-100%);
 }
 /* Light nav for pages with white/light page headers */
 .nav--light {
@@ -48,7 +56,7 @@
 .nav__inner { height:100%; display:flex; align-items:center; justify-content:space-between; gap:var(--sp-6); }
 .nav__logo { display:flex; align-items:center; gap:var(--sp-3); text-decoration:none; }
 .nav__logo-img {
-  height: 40px; width: 40px; object-fit: contain;
+  height: 64px; width: 64px; object-fit: contain;
   transition: filter var(--dur) var(--ease);
 }
 /* Invert logo to white when nav is transparent-dark (very top of homepage) */
@@ -74,7 +82,24 @@
   transition: color var(--dur) var(--ease), background var(--dur) var(--ease);
 }
 .nav__link:hover { color: var(--charcoal); background: var(--chalk); }
-.nav__link--active { color: var(--charcoal); font-weight: 600; }
+.nav__link--active {
+  color: var(--charcoal); font-weight: 700;
+  position: relative;
+}
+.nav__link--active::after {
+  content: '';
+  position: absolute; bottom: 4px; left: 50%;
+  transform: translateX(-50%);
+  width: 18px; height: 2px;
+  background: var(--charcoal);
+  border-radius: 2px;
+}
+/* Active link on dark nav (homepage) */
+.nav:not(.nav--light) .nav__link--active { color: var(--white); font-weight: 700; }
+.nav:not(.nav--light) .nav__link--active::after { background: var(--white); }
+/* Active link on light nav */
+.nav--light .nav__link--active { color: var(--charcoal); font-weight: 700; }
+.nav--light .nav__link--active::after { background: var(--charcoal); }
 .nav__cta { display:flex; align-items:center; gap:var(--sp-3); }
 .nav__burger { display:none; flex-direction:column; gap:5px; width:28px; padding:var(--sp-2); cursor:pointer; }
 .nav__burger span { display:block; height:1.5px; background:var(--charcoal); border-radius:0; transition:transform var(--dur) var(--ease), opacity var(--dur) var(--ease); }
@@ -390,6 +415,10 @@
   width:44px; height:44px; border-radius:var(--r-md);
   background:var(--chalk); display:flex; align-items:center;
   justify-content:center; margin-bottom:var(--sp-4); font-size:1.25rem;
+  color: var(--charcoal);
+  flex-shrink: 0;
+}
+.info-card__icon svg { display:block; }
 }
 .info-card h3 { font-size:var(--text-xl); margin-bottom:var(--sp-3); }
 .info-card p { font-size:var(--text-sm); color:var(--text-soft); line-height:1.75; }
@@ -575,9 +604,32 @@
 .footer__contact-item a { color:inherit; transition:color var(--dur) var(--ease); }
 .footer__contact-item a:hover { color:var(--white); }
 .footer__bottom { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:var(--sp-4); font-size:var(--text-xs); color:rgba(255,255,255,0.2); }
+.footer__credit {
+  font-size: var(--text-xs); font-weight: 600;
+  color: rgba(255,255,255,0.45);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  transition: color var(--dur) var(--ease);
+}
+.footer__credit:hover { color: rgba(255,255,255,0.9); }
 .footer__legal { display:flex; gap:var(--sp-5); }
 .footer__legal a { transition:color var(--dur) var(--ease); }
 .footer__legal a:hover { color:rgba(255,255,255,0.6); }
+
+/* AskShrikaa footer link */
+.footer__ask-link {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+  transition: color var(--dur) var(--ease), letter-spacing var(--dur) var(--ease);
+  text-decoration: none;
+}
+.footer__ask-link:hover {
+  color: rgba(255,255,255,0.85);
+  letter-spacing: 0.12em;
+}
 @media (max-width:900px) { .footer__grid { grid-template-columns:1fr 1fr; } }
 @media (max-width:560px) { .footer__grid { grid-template-columns:1fr; gap:var(--sp-8); } .footer__bottom { flex-direction:column; text-align:center; } }
 

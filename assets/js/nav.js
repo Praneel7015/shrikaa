@@ -6,17 +6,46 @@
   if (!nav || !burger || !mobile) return;
 
   var isLightPage = nav.classList.contains('nav--light');
+  var lastY       = 0;
+  var ticking     = false;
 
   function onScroll() {
-    if (window.scrollY > 40) {
+    var y = window.scrollY;
+
+    // Scrolled state (background + light mode)
+    if (y > 40) {
       nav.classList.add('nav--scrolled');
       if (!isLightPage) nav.classList.add('nav--light');
     } else {
       nav.classList.remove('nav--scrolled');
       if (!isLightPage) nav.classList.remove('nav--light');
     }
+
+    // Hide on scroll-down, reveal on scroll-up
+    // Always show when within 60px of top
+    if (y < 60) {
+      nav.classList.remove('nav--hidden');
+    } else if (y > lastY + 6) {
+      // Scrolling down — hide; also close mobile menu
+      nav.classList.add('nav--hidden');
+      mobile.classList.remove('nav__mobile--open');
+      burger.classList.remove('nav__burger--open');
+      burger.setAttribute('aria-expanded', 'false');
+    } else if (y < lastY - 6) {
+      // Scrolling up — reveal
+      nav.classList.remove('nav--hidden');
+    }
+
+    lastY    = y;
+    ticking  = false;
   }
-  window.addEventListener('scroll', onScroll, { passive: true });
+
+  window.addEventListener('scroll', function () {
+    if (!ticking) {
+      window.requestAnimationFrame(onScroll);
+      ticking = true;
+    }
+  }, { passive: true });
   onScroll();
 
   burger.addEventListener('click', function () {
