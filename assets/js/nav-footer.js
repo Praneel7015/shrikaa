@@ -6,7 +6,7 @@
     return '<nav class="nav' + (isLight ? ' nav--light' : '') + '" id="nav">' +
       '<div class="container nav__inner">' +
         '<a href="index.html" class="nav__logo" aria-label="Shrikaa home">' +
-          '<img src="assets/images/logo.png" alt="Shrikaa" class="nav__logo-img" />' +
+          '<img src="assets/images/logo-cropped.png" alt="Shrikaa" class="nav__logo-img" />' +
           '<span class="nav__logo-text">Shrikaa</span>' +
         '</a>' +
         '<div class="nav__links">' +
