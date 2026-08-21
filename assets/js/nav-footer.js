@@ -83,9 +83,9 @@
           '<div class="footer__col">' +
             '<h4>Contact</h4>' +
             '<address style="font-style:normal;">' +
-              '<div class="footer__contact-item"><span>&#9672;</span><span>Gopal Krishna Complex, 45/3, Residency Road, Bengaluru 560025</span></div>' +
-              '<div class="footer__contact-item"><span>&#9990;</span><a href="tel:+919902316289">+91 99023 16289</a></div>' +
-              '<div class="footer__contact-item"><span>&#9993;</span><a href="mailto:write2shrikaa@gmail.com">write2shrikaa@gmail.com</a></div>' +
+              '<div class="footer__contact-item"><span>&#9672;</span><span>276/D, Jayanagar 8th block bengaluru</span></div>' +
+              '<div class="footer__contact-item"><span>&#9990;</span><a href="tel:7026386563">7026386563</a></div>' +
+              '<div class="footer__contact-item"><span>&#9993;</span><a href="mailto:askshrikaa@gmail.com">askshrikaa@gmail.com</a></div>' +
             '</address>' +
             '<div style="margin-top:var(--sp-5);">' +
               '<a href="https://www.askshrikaa.com" target="_blank" rel="noopener" class="footer__ask-link">AskShrikaa Platform &rarr;</a>' +
@@ -107,7 +107,7 @@
       '<img src="assets/images/askshrikaa-logo.png" alt="AskShrikaa" />' +
     '</a>' +
     /* WhatsApp float */
-    '<a href="https://wa.me/919902316289" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">' +
+    '<a href="https://wa.me/7026386563" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">' +
       '<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M16 2C8.268 2 2 8.268 2 16c0 2.47.67 4.79 1.84 6.78L2 30l7.42-1.81A14 14 0 0 0 16 30c7.732 0 14-6.268 14-14S23.732 2 16 2zm7.21 19.44c-.3.84-1.76 1.6-2.42 1.65-.62.05-1.2.28-4.04-.84-3.38-1.34-5.56-4.8-5.73-5.02-.17-.22-1.38-1.83-1.38-3.49s.87-2.48 1.18-2.82c.3-.33.66-.42.88-.42.22 0 .44.01.63.01.2 0 .47-.08.74.56.28.66.95 2.3 1.04 2.47.09.17.14.37.03.6-.11.22-.17.36-.33.55-.17.2-.35.44-.5.59-.17.17-.34.35-.15.68.2.33.87 1.44 1.87 2.33 1.28 1.14 2.36 1.5 2.7 1.66.33.17.53.14.72-.08.2-.22.84-.99 1.07-1.32.22-.33.44-.28.74-.17.3.11 1.9.9 2.23 1.06.33.17.55.25.63.39.08.14.08.8-.22 1.65z"/></svg>' +
     '</a>';
 
