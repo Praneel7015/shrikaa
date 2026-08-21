@@ -539,6 +539,69 @@
   pointer-events:none;
 }
 .askshrikaa-section .container { position:relative; z-index:1; }
+
+/* ── Ask Steps timeline ──────────────────────────────────────────── */
+.ask-steps {
+  display: flex;
+  flex-direction: column;
+}
+.ask-step {
+  display: flex;
+  gap: var(--sp-5);
+  align-items: stretch;
+}
+.ask-step__track {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 16px;
+}
+.ask-step__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.35);
+  flex-shrink: 0;
+  margin-top: 3px; /* aligns with label baseline */
+  transition: background 0.2s ease;
+}
+.ask-step:hover .ask-step__dot {
+  background: rgba(255,255,255,0.75);
+}
+.ask-step__line {
+  width: 1px;
+  flex: 1;
+  background: rgba(255,255,255,0.1);
+  min-height: 28px;
+  margin-top: 6px;
+}
+.ask-step__body {
+  padding-bottom: var(--sp-6);
+}
+.ask-step--last .ask-step__body {
+  padding-bottom: 0;
+}
+.ask-step__label {
+  display: block;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+  margin-bottom: var(--sp-2);
+  transition: color 0.2s ease;
+}
+.ask-step:hover .ask-step__label {
+  color: rgba(255,255,255,0.65);
+}
+.ask-step__text {
+  font-size: var(--text-sm);
+  color: rgba(255,255,255,0.5);
+  line-height: 1.75;
+  margin: 0;
+}
+
 .ask-features { display:grid; grid-template-columns:repeat(3,1fr); gap:var(--sp-5); margin-top:var(--sp-10); }
 .ask-feature {
   background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08);
