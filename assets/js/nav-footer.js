@@ -43,8 +43,8 @@
         '<div class="footer__grid">' +
           '<div class="footer__brand">' +
             '<div class="footer__logo">' +
-              '<img src="assets/images/logo.png" alt="Shrikaa" class="footer__logo-img" />' +
-              '<span class="footer__logo-text">Shrikaa</span>' +
+              '<img src="assets/images/logo-cropped.png" alt="Shrikaa" class="footer__logo-img" />' +
+              '<span class="footer__logo-text" style="font-family:var(--font-brand);font-weight:400;letter-spacing:0.08em;">Shrikaa</span>' +
             '</div>' +
             '<p>Affordable, high-quality coaching for 1st &amp; 2nd PUC, CET, NEET, and JEE students in Bengaluru.</p>' +
             '<div class="footer__social" aria-label="Social media">' +

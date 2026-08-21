@@ -645,7 +645,7 @@
 .footer__grid { display:grid; grid-template-columns:2fr 1fr 1fr 1.2fr; gap:var(--sp-10); padding-bottom:var(--sp-12); border-bottom:1px solid rgba(255,255,255,0.07); margin-bottom:var(--sp-8); }
 .footer__logo { display:flex; align-items:center; gap:var(--sp-3); margin-bottom:var(--sp-5); }
 .footer__logo-img { height:44px; width:44px; object-fit:contain; filter:invert(1); opacity:0.85; }
-.footer__logo-text { font-family:var(--font-body); font-size:1rem; font-weight:700; color:var(--white); letter-spacing:0.05em; text-transform:uppercase; }
+.footer__logo-text { font-family:var(--font-brand); font-size:1.05rem; font-weight:400; color:var(--white); letter-spacing:0.08em; }
 .footer__brand p { font-size:var(--text-sm); line-height:1.85; margin-bottom:var(--sp-5); max-width:280px; color:rgba(255,255,255,0.4); font-weight:300; }
 .footer__social { display:flex; gap:var(--sp-3); }
 .footer__social-link {
