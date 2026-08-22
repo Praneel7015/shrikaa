@@ -251,7 +251,7 @@
       prevId:     'facultyPrev',
       nextId:     'facultyNext',
       dotsId:     'facultyDots',
-      perPage:    2,
+      perPage:    3,
       autoplayMs: 3500
     });
   });
