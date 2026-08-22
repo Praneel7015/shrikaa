@@ -1,13 +1,14 @@
 /**
- * Formspree configuration
+ * FormSubmit configuration
  * ─────────────────────────────────────────────────────────────────
- * 1. Go to https://formspree.io and sign up with askshrikaa@gmail.com
- * 2. Create a new form → copy the form ID (the part after /f/)
- * 3. Paste it below — both contact & admissions forms use this endpoint
+ * Submissions are sent to this email via https://formsubmit.co
+ * On the first submission, FormSubmit will email you a confirmation
+ * link — click it once to activate. After that, all enquiries arrive
+ * directly in your inbox.
  */
 (function () {
   'use strict';
-  window.SHRIKAA_FORMSPREE = {
-    endpoint: ''  // e.g. 'https://formspree.io/f/xyzabcde'
+  window.SHRIKAA_FORM = {
+    email: 'askshrikaa@gmail.com'
   };
 })();

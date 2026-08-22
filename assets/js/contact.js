@@ -8,6 +8,8 @@
   if (!form) return;
 
   var formType = form.dataset.formType || 'contact';
+  var formEmail = (window.SHRIKAA_FORM && window.SHRIKAA_FORM.email) || 'askshrikaa@gmail.com';
+  var endpoint  = 'https://formsubmit.co/ajax/' + encodeURIComponent(formEmail);
 
   function showError(id, msg) {
     var errEl = document.getElementById(id);
@@ -29,6 +31,9 @@
     var name  = form.querySelector('#name');
     var phone = form.querySelector('#phone');
     var email = form.querySelector('#email');
+    var honey = form.querySelector('[name="_honey"]');
+
+    if (honey && honey.value) return false;
 
     if (!name || !name.value.trim()) {
       showError('name-error', 'Please enter your full name.');
@@ -85,16 +90,11 @@
     e.preventDefault();
     if (!validate()) return;
 
-    var endpoint = (window.SHRIKAA_FORMSPREE && window.SHRIKAA_FORMSPREE.endpoint) || form.dataset.endpoint || '';
-
-    if (!endpoint) {
-      showGlobalError('Form delivery is not configured yet. Please email us directly at askshrikaa@gmail.com or call 7026386563.');
-      return;
-    }
-
     var fd = new FormData(form);
     fd.append('_subject', 'Shrikaa ' + (formType === 'admissions' ? 'Admissions' : 'Contact') + ' enquiry');
-    fd.append('_form_source', formType);
+    fd.append('_template', 'table');
+    fd.append('_captcha', 'false');
+    fd.append('Form', formType === 'admissions' ? 'Admissions page' : 'Contact page');
 
     var emailField = form.querySelector('#email');
     if (emailField && emailField.value.trim()) {
@@ -109,8 +109,12 @@
       headers: { Accept: 'application/json' }
     })
       .then(function (res) {
-        if (!res.ok) return res.json().then(function (d) { throw new Error(d.error || 'Submission failed'); });
-        showSuccess();
+        return res.json().then(function (data) {
+          if (!res.ok || data.success === false) {
+            throw new Error(data.message || 'Submission failed');
+          }
+          showSuccess();
+        });
       })
       .catch(function () {
         showGlobalError('Something went wrong. Please try again or call us at 7026386563.');
