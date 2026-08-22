@@ -256,26 +256,13 @@
   filter: invert(1);
 }
 
-/* Hero eyebrow — animated blink dot (ported from Sanmargaha hero-pill) */
+/* Hero eyebrow */
 .hero__eyebrow {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   margin-bottom: var(--sp-5);
   color: rgba(255,255,255,0.45);
-}
-.hero__eyebrow::before {
-  content: '';
-  display: inline-block;
-  width: 6px; height: 6px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.5);
-  flex-shrink: 0;
-  animation: blink 1.8s ease-in-out infinite;
-}
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50%       { opacity: 0.2; }
 }
 .hero__inner {
   position:relative; z-index:1;
@@ -327,6 +314,19 @@
   color:var(--white); line-height:1; letter-spacing:-0.02em;
 }
 .hero__panel-desc { font-size:var(--text-sm); color:rgba(255,255,255,0.4); text-align:right; max-width:100px; line-height:1.4; }
+.hero__panel-link {
+  font-size: var(--text-xs);
+  color: rgba(255,255,255,0.3);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.2s ease, letter-spacing 0.2s ease;
+}
+.hero__panel-link:hover {
+  color: var(--white);
+  letter-spacing: 0.12em;
+}
 @media (max-width:960px) {
   .hero__inner { grid-template-columns:1fr; }
   .hero__panel { display:grid; grid-template-columns:repeat(3,1fr); }
@@ -622,6 +622,104 @@
 .ask-feature h3 { font-size:var(--text-base); font-weight:600; color:var(--white); margin-bottom:var(--sp-2); }
 .ask-feature p { font-size:var(--text-sm); color:rgba(255,255,255,0.45); line-height:1.75; }
 @media (max-width:768px) { .ask-features { grid-template-columns:1fr; } }
+
+/* =========================================================
+   FACULTY CAROUSEL
+   ========================================================= */
+
+/* Wrapper with side padding so the arrow buttons sit outside the clip */
+.faculty-carousel-wrap {
+  position: relative;
+  padding: 0 var(--sp-10);
+}
+
+/* The clip zone */
+.faculty-carousel {
+  overflow: hidden;
+  padding-bottom: var(--sp-10);
+}
+
+/* The sliding row — JS sets transform; gap matches GAP constant in carousel.js */
+.faculty-carousel__track {
+  display: flex;
+  gap: 24px;           /* matches GAP = 24 in carousel.js */
+  will-change: transform;
+  /* transition is set by JS so instant-snap can clear it */
+}
+
+/* Individual card — width is set by JS */
+.faculty-card {
+  flex-shrink: 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  box-shadow: 0 2px 12px rgba(18,18,20,0.06);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.faculty-card:hover {
+  box-shadow: 0 8px 28px rgba(18,18,20,0.12);
+  transform: translateY(-3px);
+}
+.faculty-card__img-wrap {
+  aspect-ratio: 212 / 300;
+  overflow: hidden;
+}
+.faculty-card__img-wrap img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.faculty-card:hover .faculty-card__img-wrap img {
+  transform: scale(1.04);
+}
+
+/* Prev / Next buttons — sit outside the overflow clip, inside the wrap */
+.faculty-carousel__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(calc(-50% - var(--sp-5)));
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border-dark);
+  background: var(--white);
+  color: var(--charcoal);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  z-index: 2;
+  flex-shrink: 0;
+}
+.faculty-carousel__btn:hover {
+  background: var(--charcoal);
+  color: var(--white);
+  border-color: var(--charcoal);
+}
+.faculty-carousel__btn--prev { left: 0; }
+.faculty-carousel__btn--next { right: 0; }
+
+/* Dot indicators */
+.faculty-carousel__dots {
+  display: flex;
+  justify-content: center;
+  gap: var(--sp-2);
+  margin-top: var(--sp-6);
+}
+.faculty-carousel__dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--border-dark);
+  cursor: pointer;
+  transition: background 0.25s, transform 0.25s;
+  border: none;
+  padding: 0;
+}
+.faculty-carousel__dot--active {
+  background: var(--charcoal);
+  transform: scale(1.4);
+}
 
 /* RESULTS GALLERY */
 .results-gallery {

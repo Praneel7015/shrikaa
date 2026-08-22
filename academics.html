@@ -166,6 +166,57 @@
       </div>
     </section>
 
+    <!-- Faculty Carousel -->
+    <section class="section bg-chalk" id="faculty" aria-labelledby="faculty-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Our Faculties</span>
+          <h2 class="display-md" id="faculty-heading" style="margin-top:var(--sp-3);">Taught by Experts</h2>
+          <p class="lead" style="max-width:600px;margin-top:var(--sp-4);">Our faculty brings decades of classroom experience, exam expertise and a genuine commitment to every student's success.</p>
+        </div>
+
+        <div class="faculty-carousel-wrap reveal">
+          <div class="faculty-carousel" id="facultyOuter">
+            <div class="faculty-carousel__track" id="facultyTrack">
+              <div class="faculty-card">
+                <div class="faculty-card__img-wrap">
+                  <img src="assets/images/faculty/faculty-1.png" alt="Faculty member" loading="lazy" />
+                </div>
+              </div>
+              <div class="faculty-card">
+                <div class="faculty-card__img-wrap">
+                  <img src="assets/images/faculty/faculty-2.png" alt="Faculty member" loading="lazy" />
+                </div>
+              </div>
+              <div class="faculty-card">
+                <div class="faculty-card__img-wrap">
+                  <img src="assets/images/faculty/faculty-3.png" alt="Faculty member" loading="lazy" />
+                </div>
+              </div>
+              <div class="faculty-card">
+                <div class="faculty-card__img-wrap">
+                  <img src="assets/images/faculty/faculty-4.png" alt="Faculty member" loading="lazy" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="faculty-carousel__btn faculty-carousel__btn--prev" id="facultyPrev" aria-label="Previous">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <button class="faculty-carousel__btn faculty-carousel__btn--next" id="facultyNext" aria-label="Next">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+
+          <div class="faculty-carousel__dots" id="facultyDots"></div>
+        </div>
+      </div>
+    </section>
+
     <!-- CTA -->
     <section class="section--sm bg-warm">
       <div class="container">
@@ -183,6 +234,7 @@
 
   </main>
   <script src="assets/js/reveal.js" defer></script>
+  <script src="assets/js/carousel.js" defer></script>
 
   <div id="site-footer"></div>
 
