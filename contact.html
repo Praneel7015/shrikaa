@@ -39,7 +39,7 @@
               Message received. We will call or email you back within 24 hours.
             </div>
 
-            <form id="contact-form" novalidate aria-label="Contact enquiry form">
+            <form id="contact-form" data-form-type="contact" novalidate aria-label="Contact enquiry form">
               <div class="grid-2" style="gap:var(--sp-4);">
                 <div class="form-group">
                   <label class="form-label" for="name">Full Name <span aria-hidden="true" style="color:#B83232;">*</span></label>
@@ -73,7 +73,7 @@
                 <label class="form-label" for="message">Message</label>
                 <textarea class="form-textarea" id="message" name="message" placeholder="Tell us about yourself &mdash; which class you&rsquo;re in, your target exam, any questions you have about admissions or fees."></textarea>
               </div>
-              <button type="submit" class="btn btn--primary btn--lg" style="width:100%;justify-content:center;">
+              <button type="submit" id="submit-btn" class="btn btn--primary btn--lg" style="width:100%;justify-content:center;">
                 Send Message &rarr;
               </button>
             </form>
@@ -143,6 +143,7 @@
     </section>
 
   </main>
+  <script src="assets/js/form-config.js"></script>
   <script src="assets/js/contact.js" defer></script>
   <script src="assets/js/reveal.js" defer></script>
 
