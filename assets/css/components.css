@@ -220,7 +220,14 @@
 
 /* HERO */
 .hero {
-  min-height:100vh; background:var(--charcoal);
+  min-height:100vh;
+  background:var(--charcoal);
+  background-image:
+    linear-gradient(to right, rgba(18,18,20,0.82) 0%, rgba(18,18,20,0.55) 60%, rgba(18,18,20,0.35) 100%),
+    url('../images/hero/hero-bg.jpg');
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
   display:flex; align-items:center;
   padding-top:var(--nav-h); position:relative; overflow:hidden;
 }
@@ -230,7 +237,7 @@
   width:900px; height:900px;
   background: var(--mandala-texture-dark);
   background-size:100% 100%;
-  pointer-events:none; opacity:1;
+  pointer-events:none; opacity:0.6;
 }
 /* Dot grid overlay — ported from Sanmargaha */
 .hero__dots {
