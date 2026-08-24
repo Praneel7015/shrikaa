@@ -106,9 +106,9 @@
     '<a href="https://www.askshrikaa.com" class="ask-float" target="_blank" rel="noopener" aria-label="Open AskShrikaa platform">' +
       '<img src="assets/images/askshrikaa-logo.png" alt="AskShrikaa" />' +
     '</a>' +
-    /* WhatsApp float */
+    /* WhatsApp float — official brand glyph */
     '<a href="https://wa.me/7026386563" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">' +
-      '<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M16 2C8.268 2 2 8.268 2 16c0 2.47.67 4.79 1.84 6.78L2 30l7.42-1.81A14 14 0 0 0 16 30c7.732 0 14-6.268 14-14S23.732 2 16 2zm7.21 19.44c-.3.84-1.76 1.6-2.42 1.65-.62.05-1.2.28-4.04-.84-3.38-1.34-5.56-4.8-5.73-5.02-.17-.22-1.38-1.83-1.38-3.49s.87-2.48 1.18-2.82c.3-.33.66-.42.88-.42.22 0 .44.01.63.01.2 0 .47-.08.74.56.28.66.95 2.3 1.04 2.47.09.17.14.37.03.6-.11.22-.17.36-.33.55-.17.2-.35.44-.5.59-.17.17-.34.35-.15.68.2.33.87 1.44 1.87 2.33 1.28 1.14 2.36 1.5 2.7 1.66.33.17.53.14.72-.08.2-.22.84-.99 1.07-1.32.22-.33.44-.28.74-.17.3.11 1.9.9 2.23 1.06.33.17.55.25.63.39.08.14.08.8-.22 1.65z"/></svg>' +
+      '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 6.045L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>' +
     '</a>';
 
   /* ─── MOUNT ─────────────────────────────────────────────────────── */
@@ -128,11 +128,13 @@
       footerSlot.outerHTML = FOOTER_HTML;
     }
 
-    /* Mark active links */
-    document.querySelectorAll('[data-page]').forEach(function (el) {
-      if (el.dataset.page === page) {
-        el.classList.add('nav__link--active');
+    /* Mark active links — only the matching link type, never on <body> */
+    document.querySelectorAll('#nav [data-page]').forEach(function (el) {
+      if (el.dataset.page !== page) return;
+      if (el.classList.contains('nav__mobile-link')) {
         el.classList.add('nav__mobile-link--active');
+      } else {
+        el.classList.add('nav__link--active');
       }
     });
 
@@ -151,8 +153,36 @@
     var lastY       = 0;
     var ticking     = false;
 
+    /* Relocate drawer to <body> so fixed positioning isn't trapped
+       by nav backdrop-filter / transform containing blocks */
+    if (mobile.parentElement !== document.body) {
+      document.body.appendChild(mobile);
+    }
+
+    function isMenuOpen() {
+      return mobile.classList.contains('nav__mobile--open');
+    }
+
+    function setMenuOpen(open) {
+      mobile.classList.toggle('nav__mobile--open', open);
+      burger.classList.toggle('nav__burger--open', open);
+      nav.classList.toggle('nav--menu-open', open);
+      document.body.classList.toggle('nav-menu-open', open);
+      burger.setAttribute('aria-expanded', String(open));
+      if (open) {
+        nav.classList.remove('nav--hidden');
+      }
+    }
+
     function onScroll() {
       var y = window.scrollY;
+
+      /* Keep chrome stable while the drawer is open */
+      if (isMenuOpen()) {
+        lastY   = y;
+        ticking = false;
+        return;
+      }
 
       if (y > 40) {
         nav.classList.add('nav--scrolled');
@@ -166,9 +196,6 @@
         nav.classList.remove('nav--hidden');
       } else if (y > lastY + 6) {
         nav.classList.add('nav--hidden');
-        mobile.classList.remove('nav__mobile--open');
-        burger.classList.remove('nav__burger--open');
-        burger.setAttribute('aria-expanded', 'false');
       } else if (y < lastY - 6) {
         nav.classList.remove('nav--hidden');
       }
@@ -182,25 +209,32 @@
     }, { passive: true });
     onScroll();
 
-    burger.addEventListener('click', function () {
-      var isOpen = mobile.classList.toggle('nav__mobile--open');
-      burger.classList.toggle('nav__burger--open', isOpen);
-      burger.setAttribute('aria-expanded', String(isOpen));
+    burger.addEventListener('click', function (e) {
+      e.stopPropagation();
+      setMenuOpen(!isMenuOpen());
+    });
+
+    mobile.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        setMenuOpen(false);
+      });
     });
 
     document.addEventListener('click', function (e) {
-      if (!nav.contains(e.target)) {
-        mobile.classList.remove('nav__mobile--open');
-        burger.classList.remove('nav__burger--open');
-        burger.setAttribute('aria-expanded', 'false');
-      }
+      if (!isMenuOpen()) return;
+      if (nav.contains(e.target) || mobile.contains(e.target)) return;
+      setMenuOpen(false);
     });
 
     document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') {
-        mobile.classList.remove('nav__mobile--open');
-        burger.classList.remove('nav__burger--open');
-        burger.setAttribute('aria-expanded', 'false');
+      if (e.key === 'Escape' && isMenuOpen()) {
+        setMenuOpen(false);
+      }
+    });
+
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 768 && isMenuOpen()) {
+        setMenuOpen(false);
       }
     });
   }
