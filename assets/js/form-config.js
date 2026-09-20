@@ -1,14 +1,13 @@
 /**
- * FormSubmit configuration
- * ─────────────────────────────────────────────────────────────────
- * Submissions are sent to this email via https://formsubmit.co
- * On the first submission, FormSubmit will email you a confirmation
- * link — click it once to activate. After that, all enquiries arrive
- * directly in your inbox.
+ * Site config — forms + analytics
+ * Replace ga4 with your Measurement ID from Google Analytics (e.g. G-XXXXXXXXXX).
  */
 (function () {
   'use strict';
   window.SHRIKAA_FORM = {
     email: 'askshrikaa@gmail.com'
+  };
+  window.SHRIKAA_ANALYTICS = {
+    ga4: '' // e.g. 'G-XXXXXXXXXX'
   };
 })();

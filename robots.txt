@@ -1,7 +1,7 @@
 ﻿User-agent: *
 Allow: /
 
-Sitemap: https://www.shrikaa.co.in/sitemap.xml
+# Allow image assets for Google Images / rich results
+Allow: /assets/images/
 
-# Disallow server-side paths (none for static site, but good hygiene)
-Disallow: /assets/
+Sitemap: https://www.shrikaa.co.in/sitemap.xml

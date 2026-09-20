@@ -114,6 +114,12 @@
             throw new Error(data.message || 'Submission failed');
           }
           showSuccess();
+          if (typeof window.SHRIKAA_TRACK === 'function') {
+            window.SHRIKAA_TRACK('generate_lead', {
+              form_type: formType,
+              method: 'formsubmit'
+            });
+          }
         });
       })
       .catch(function () {
