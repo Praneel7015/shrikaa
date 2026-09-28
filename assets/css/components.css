@@ -1182,30 +1182,6 @@ body::-webkit-scrollbar,
 /* =================================================================
    TRUST STRIP + MOBILE CTA BAR
    ================================================================= */
-.trust-strip {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--sp-3) var(--sp-5);
-  margin-bottom: var(--sp-6);
-  padding: var(--sp-4) var(--sp-5);
-  background: var(--chalk);
-  border: 1px solid var(--border-light);
-  border-radius: var(--r-md);
-  font-size: var(--text-xs);
-  color: var(--text-soft);
-  font-weight: 500;
-}
-.trust-strip span {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35em;
-}
-.trust-strip span::before {
-  content: '✓';
-  color: var(--charcoal);
-  font-weight: 700;
-}
-
 .mobile-cta {
   display: none;
   position: fixed;
@@ -1282,6 +1258,16 @@ body::-webkit-scrollbar,
   gap: var(--sp-12);
   align-items: start;
 }
+.program-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: var(--sp-4);
+  margin-top: var(--sp-8);
+}
+.program-actions .btn {
+  justify-content: center;
+}
 @media (max-width: 900px) {
   .landing-split { grid-template-columns: 1fr; }
 }
@@ -1346,4 +1332,6 @@ body::-webkit-scrollbar,
   .guide-grid { grid-template-columns: 1fr; }
   .hero__actions .btn { min-height: 44px; }
   .btn--lg { min-height: 44px; }
+  .program-actions { gap: var(--sp-3); }
+  .program-actions .btn { flex: 1 1 100%; }
 }
