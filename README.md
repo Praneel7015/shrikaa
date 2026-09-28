@@ -12,6 +12,7 @@ Rebuilt website for **Shrikaa Intellect Innovations**, Bengaluru's affordable co
 | `about.html` | About — mission, values, CEO quote, presence, donors |
 | `academics.html` | Courses / Academics |
 | `results.html` | CET results gallery + college placements |
+| `donate.html` | Support accessible education |
 | `contact.html` | Contact form + Google Maps embed |
 | `neet-coaching-bengaluru.html` | NEET program landing (SEO) |
 | `cet-coaching-bengaluru.html` | CET / KCET program landing |
