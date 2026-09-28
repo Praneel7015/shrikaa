@@ -107,7 +107,6 @@
     '</footer>' +
     '<nav class="mobile-cta" aria-label="Quick actions">' +
       '<a href="tel:+917026386563" class="mobile-cta__btn">Call</a>' +
-      '<a href="https://wa.me/917026386563" class="mobile-cta__btn mobile-cta__btn--wa" target="_blank" rel="noopener">WhatsApp</a>' +
       '<a href="admissions.html" class="mobile-cta__btn mobile-cta__btn--primary">Apply</a>' +
     '</nav>' +
     '<a href="https://www.askshrikaa.com" class="ask-float" target="_blank" rel="noopener" aria-label="Open AskShrikaa platform">' +
