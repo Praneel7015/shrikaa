@@ -14,8 +14,6 @@
           '<a href="about.html"      class="nav__link" data-page="about">About</a>' +
           '<a href="academics.html"  class="nav__link" data-page="academics">Courses</a>' +
           '<a href="results.html"    class="nav__link" data-page="results">Results</a>' +
-          '<a href="admissions.html" class="nav__link" data-page="admissions">Admissions</a>' +
-          '<a href="guides/index.html" class="nav__link" data-page="guides">Guides</a>' +
           '<a href="contact.html"    class="nav__link" data-page="contact">Contact</a>' +
         '</div>' +
         '<div class="nav__cta">' +
@@ -30,8 +28,6 @@
         '<a href="about.html"      class="nav__mobile-link" data-page="about">About</a>' +
         '<a href="academics.html"  class="nav__mobile-link" data-page="academics">Courses</a>' +
         '<a href="results.html"    class="nav__mobile-link" data-page="results">Results</a>' +
-        '<a href="admissions.html" class="nav__mobile-link" data-page="admissions">Admissions</a>' +
-        '<a href="guides/index.html" class="nav__mobile-link" data-page="guides">Guides</a>' +
         '<a href="contact.html"    class="nav__mobile-link" data-page="contact">Contact</a>' +
         '<a href="https://www.askshrikaa.com" class="btn btn--primary nav__mobile-cta" target="_blank" rel="noopener">AskShrikaa &rarr;</a>' +
       '</div>' +
@@ -67,8 +63,6 @@
               '<a href="about.html">About Us</a>' +
               '<a href="academics.html">Courses</a>' +
               '<a href="results.html">Results</a>' +
-              '<a href="admissions.html">Admissions</a>' +
-              '<a href="guides/index.html">Guides</a>' +
               '<a href="contact.html">Contact</a>' +
             '</nav>' +
           '</div>' +
@@ -100,14 +94,14 @@
           '<p>&copy; 2026 Shrikaa Intellect Innovations. All rights reserved.</p>' +
           '<div class="footer__legal">' +
             '<a href="contact.html">Privacy enquiries</a>' +
-            '<a href="admissions.html">Admissions</a>' +
+            '<a href="contact.html">Enquire</a>' +
           '</div>' +
         '</div>' +
       '</div>' +
     '</footer>' +
     '<nav class="mobile-cta" aria-label="Quick actions">' +
       '<a href="tel:+917026386563" class="mobile-cta__btn">Call</a>' +
-      '<a href="admissions.html" class="mobile-cta__btn mobile-cta__btn--primary">Apply</a>' +
+      '<a href="contact.html" class="mobile-cta__btn mobile-cta__btn--primary">Enquire</a>' +
     '</nav>' +
     '<a href="https://www.askshrikaa.com" class="ask-float" target="_blank" rel="noopener" aria-label="Open AskShrikaa platform">' +
       '<img src="assets/images/askshrikaa-logo-sm.png" alt="AskShrikaa" width="40" height="40" />' +
@@ -116,29 +110,9 @@
       '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 6.045L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>' +
     '</a>';
 
-  function assetPrefix() {
-    var path = window.location.pathname || '';
-    return path.indexOf('/guides/') !== -1 ? '../' : '';
-  }
-
-  function rewriteMountedPaths(prefix) {
-    if (!prefix) return;
-    document.querySelectorAll('img[src^="assets/"]').forEach(function (el) {
-      el.setAttribute('src', prefix + el.getAttribute('src'));
-    });
-    document.querySelectorAll('a[href]').forEach(function (a) {
-      var href = a.getAttribute('href') || '';
-      if (!href || href.indexOf('http') === 0 || href.indexOf('tel:') === 0 || href.indexOf('mailto:') === 0 || href.charAt(0) === '#' || href.indexOf('../') === 0) return;
-      if (/\.html($|#)/.test(href) || href.indexOf('guides/') === 0) {
-        a.setAttribute('href', prefix + href);
-      }
-    });
-  }
-
   function mount() {
     var page     = document.body.dataset.page || '';
     var isLight  = page !== 'home';
-    var prefix   = assetPrefix();
 
     var navSlot = document.getElementById('site-nav');
     if (navSlot) {
@@ -150,8 +124,6 @@
       footerSlot.outerHTML = FOOTER_HTML;
       document.body.classList.add('has-mobile-cta');
     }
-
-    rewriteMountedPaths(prefix);
 
     document.querySelectorAll('#nav [data-page]').forEach(function (el) {
       if (el.dataset.page !== page) return;

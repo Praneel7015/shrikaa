@@ -11,14 +11,12 @@ Rebuilt website for **Shrikaa Intellect Innovations**, Bengaluru's affordable co
 | `index.html` | Homepage — hero, stats, features, AskShrikaa section |
 | `about.html` | About — mission, values, CEO quote, presence, donors |
 | `academics.html` | Courses / Academics |
-| `admissions.html` | Admissions + fees + FAQ |
 | `results.html` | CET results gallery + college placements |
 | `contact.html` | Contact form + Google Maps embed |
 | `neet-coaching-bengaluru.html` | NEET program landing (SEO) |
 | `cet-coaching-bengaluru.html` | CET / KCET program landing |
 | `puc-coaching-jayanagar.html` | PUC + Jayanagar local landing |
 | `jee-coaching-bengaluru.html` | JEE program landing |
-| `guides/` | Student guides / content hub |
 | `404.html` | Custom 404 page |
 
 ---

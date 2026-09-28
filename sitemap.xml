@@ -25,12 +25,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.shrikaa.co.in/admissions</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://www.shrikaa.co.in/contact</loc>
     <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
@@ -59,35 +53,5 @@
     <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.shrikaa.co.in/guides</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.shrikaa.co.in/guides/kcet-preparation-2nd-puc</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.shrikaa.co.in/guides/affordable-neet-coaching-bengaluru</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.shrikaa.co.in/guides/jayanagar-coaching-vs-online</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.shrikaa.co.in/guides/askshrikaa-for-board-exams</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
   </url>
 </urlset>
