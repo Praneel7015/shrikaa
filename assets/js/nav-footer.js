@@ -14,6 +14,7 @@
           '<a href="about.html"      class="nav__link" data-page="about">About</a>' +
           '<a href="academics.html"  class="nav__link" data-page="academics">Courses</a>' +
           '<a href="results.html"    class="nav__link" data-page="results">Results</a>' +
+          '<a href="donate.html"      class="nav__link" data-page="donate">Donate</a>' +
           '<a href="contact.html"    class="nav__link" data-page="contact">Contact</a>' +
         '</div>' +
         '<div class="nav__cta">' +
@@ -28,6 +29,7 @@
         '<a href="about.html"      class="nav__mobile-link" data-page="about">About</a>' +
         '<a href="academics.html"  class="nav__mobile-link" data-page="academics">Courses</a>' +
         '<a href="results.html"    class="nav__mobile-link" data-page="results">Results</a>' +
+        '<a href="donate.html"      class="nav__mobile-link" data-page="donate">Donate</a>' +
         '<a href="contact.html"    class="nav__mobile-link" data-page="contact">Contact</a>' +
         '<a href="https://www.askshrikaa.com" class="btn btn--primary nav__mobile-cta" target="_blank" rel="noopener">AskShrikaa &rarr;</a>' +
       '</div>' +
@@ -63,6 +65,7 @@
               '<a href="about.html">About Us</a>' +
               '<a href="academics.html">Courses</a>' +
               '<a href="results.html">Results</a>' +
+              '<a href="donate.html">Donate</a>' +
               '<a href="contact.html">Contact</a>' +
             '</nav>' +
           '</div>' +
@@ -94,6 +97,7 @@
           '<p>&copy; 2026 Shrikaa Intellect Innovations. All rights reserved.</p>' +
           '<div class="footer__legal">' +
             '<a href="contact.html">Privacy enquiries</a>' +
+            '<a href="donate.html">Donate</a>' +
             '<a href="contact.html">Enquire</a>' +
           '</div>' +
         '</div>' +
