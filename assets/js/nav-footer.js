@@ -103,10 +103,14 @@
         '</div>' +
       '</div>' +
     '</footer>' +
-    '<nav class="mobile-cta" aria-label="Quick actions">' +
-      '<a href="tel:+917026386563" class="mobile-cta__btn">Call</a>' +
-      '<a href="contact.html" class="mobile-cta__btn mobile-cta__btn--primary">Enquire</a>' +
-    '</nav>' +
+    // Floating round buttons on every screen size, bottom right: AskShrikaa,
+    // then call above WhatsApp; back to top on the bottom left.
+    '<button type="button" class="to-top" aria-label="Back to top">' +
+      '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V5M5 12l7-7 7 7"/></svg>' +
+    '</button>' +
+    '<a href="tel:+917026386563" class="call-float" aria-label="Call Shrikaa">' +
+      '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>' +
+    '</a>' +
     '<a href="https://www.askshrikaa.com" class="ask-float" target="_blank" rel="noopener" aria-label="Open AskShrikaa platform">' +
       '<img src="assets/images/askshrikaa-logo-sm.png" alt="AskShrikaa" width="40" height="40" />' +
     '</a>' +
@@ -126,7 +130,16 @@
     var footerSlot = document.getElementById('site-footer');
     if (footerSlot) {
       footerSlot.outerHTML = FOOTER_HTML;
-      document.body.classList.add('has-mobile-cta');
+      var toTop = document.querySelector('.to-top');
+      if (toTop) {
+        var onScroll = function () { toTop.classList.toggle('show', window.scrollY > 400); };
+        toTop.addEventListener('click', function () {
+          var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+        });
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+      }
     }
 
     document.querySelectorAll('#nav [data-page]').forEach(function (el) {

@@ -33,12 +33,48 @@
   <script src="assets/js/form-config.js"></script>
   <script src="assets/js/analytics.js" defer></script>
 
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.shrikaa.co.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About",
+          "item": "https://www.shrikaa.co.in/about"
+        }
+      ]
+    },
+    {
+      "@type": "AboutPage",
+      "name": "About Us - Shrikaa Intellect Innovations | Bengaluru Coaching",
+      "url": "https://www.shrikaa.co.in/about",
+      "description": "Learn about Shrikaa Intellect Innovations: our mission to make quality PUC, NEET, JEE, and CET coaching accessible to every student in Bengaluru.",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Shrikaa Intellect Innovations",
+        "url": "https://www.shrikaa.co.in/"
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body data-page="about">
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <div id="site-nav"></div>
 
-  <main>
+  <main id="main">
 
     <!-- PAGE HEADER -->
     <header class="page-header">
@@ -69,7 +105,7 @@
           <!-- Large logo moment -->
           <div style="display:flex;align-items:center;justify-content:center;">
             <div class="about-seal">
-              <img src="assets/images/logo-cropped.png" alt="Shrikaa mandala seal" />
+              <img width="676" height="676" src="assets/images/logo-cropped.png" alt="Shrikaa mandala seal" />
             </div>
           </div>
         </div>
@@ -148,7 +184,7 @@
       <div class="container" style="max-width:860px;">
         <div class="ceo-row">
           <div style="flex-shrink:0;">
-            <img src="assets/images/about/ceo-prasanna-karthikeya.jpeg"
+            <img width="640" height="640" src="assets/images/about/ceo-prasanna-karthikeya.jpeg"
                  alt="Prasanna Karthik S, CEO &amp; Founder"
                  class="ceo-row__photo" />
           </div>
@@ -177,7 +213,7 @@
         </div>
         <div class="presence-grid">
           <figure style="margin:0;border-radius:var(--r-lg);overflow:hidden;background:var(--chalk);border:1px solid var(--border-light);">
-            <img src="assets/images/about/presence-byatarayanpura.jpeg"
+            <img width="300" height="138" src="assets/images/about/presence-byatarayanpura.jpeg"
                  alt="Govt Independent PU College &ndash; Byatarayanpura"
                  style="width:100%;height:200px;object-fit:cover;display:block;" loading="lazy" />
             <figcaption style="padding:var(--sp-4) var(--sp-5);font-size:var(--text-sm);color:var(--text-soft);font-weight:500;">
@@ -185,7 +221,7 @@
             </figcaption>
           </figure>
           <figure style="margin:0;border-radius:var(--r-lg);overflow:hidden;background:var(--chalk);border:1px solid var(--border-light);">
-            <img src="assets/images/about/presence-new-fort.jpeg"
+            <img width="300" height="169" src="assets/images/about/presence-new-fort.jpeg"
                  alt="Govt PU College &ndash; New Fort"
                  style="width:100%;height:200px;object-fit:cover;display:block;" loading="lazy" />
             <figcaption style="padding:var(--sp-4) var(--sp-5);font-size:var(--text-sm);color:var(--text-soft);font-weight:500;">
@@ -193,7 +229,7 @@
             </figcaption>
           </figure>
           <figure style="margin:0;border-radius:var(--r-lg);overflow:hidden;background:var(--chalk);border:1px solid var(--border-light);">
-            <img src="assets/images/about/presence-padavalippe.jpeg"
+            <img width="300" height="169" src="assets/images/about/presence-padavalippe.jpeg"
                  alt="Govt PU College &ndash; Padavalippe"
                  style="width:100%;height:200px;object-fit:cover;display:block;" loading="lazy" />
             <figcaption style="padding:var(--sp-4) var(--sp-5);font-size:var(--text-sm);color:var(--text-soft);font-weight:500;">
@@ -216,7 +252,7 @@
         </div>
         <div style="display:flex;align-items:center;justify-content:center;margin-top:var(--sp-12);">
           <a href="https://www.tatahitachi.co.in" target="_blank" rel="noopener" class="sponsor-card reveal">
-            <img src="assets/images/tata-hitachi.png" alt="Tata Hitachi" style="height:48px;width:auto;max-width:280px;" loading="lazy" />
+            <img width="482" height="84" src="assets/images/tata-hitachi.png" alt="Tata Hitachi" style="height:48px;width:auto;max-width:280px;" loading="lazy" />
           </a>
         </div>
       </div>
