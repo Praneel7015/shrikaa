@@ -23,13 +23,14 @@
   --chalk:        #F0EDE8;
   --border-light: #E4E0DA;
   --border:       #CCC8C2;
-  --muted:        #8A8480;
+  --muted:        #69635F;
   --text-soft:    #3D3A36;
   --text:         #1C1C1E;
   --charcoal:     #1C1C1E;
   --charcoal-mid: #2A2826;
   --charcoal-soft:#363230;
   --white:        #FFFFFF;
+  --text-on-dark: rgba(255,255,255,0.65);
 
   /* Semantic aliases */
   --bg:           var(--warm-white);

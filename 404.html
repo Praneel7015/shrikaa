@@ -2,18 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Page Not Found � Shrikaa</title>
+  <title>Page Not Found | Shrikaa</title>
   <meta name="robots" content="noindex, nofollow" />
   <meta name="theme-color" content="#1C1C1E" />
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicon-192.png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-  <script src="assets/js/form-config.js"></script>
-  <script src="assets/js/analytics.js" defer></script>
+  <script src="/assets/js/form-config.js"></script>
+  <script src="/assets/js/analytics.js" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/main.css" /><link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="/assets/css/main.css" /><link rel="stylesheet" href="/assets/css/components.css" />
 
   <style>
     html, body { margin: 0; padding: 0; height: 100%; }
@@ -47,7 +47,7 @@
       transform: translate(-50%, -50%);
       pointer-events: none;
       opacity: 0.04;
-      background-image: url('assets/images/logo.png');
+      background-image: url('/assets/images/logo.png');
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
@@ -95,7 +95,7 @@
       font-weight: 600;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.4);
+      color: rgba(255,255,255,0.65);
       margin-bottom: var(--sp-6);
     }
     .e404__pill::before {
@@ -122,7 +122,7 @@
     }
     .e404__heading em {
       font-style: italic;
-      color: rgba(255,255,255,0.45);
+      color: rgba(255,255,255,0.65);
     }
 
     .e404__sub {
@@ -170,7 +170,7 @@
 
     .e404__help {
       font-size: var(--text-sm);
-      color: rgba(255,255,255,0.3);
+      color: rgba(255,255,255,0.65);
     }
     .e404__help a {
       color: rgba(255,255,255,0.65);
@@ -179,10 +179,14 @@
       transition: color var(--dur) var(--ease);
     }
     .e404__help a:hover { color: var(--white); }
+
+    @media (prefers-reduced-motion: reduce) {
+      .e404__body, .e404__pill::before { animation: none; }
+    }
   </style>
 </head>
 <body>
-  <div class="e404">
+  <main id="main" class="e404">
     <div class="e404__mandala" aria-hidden="true"></div>
     <div class="e404__ghost" aria-hidden="true">404</div>
 
@@ -199,12 +203,12 @@
       </p>
 
       <nav class="e404__actions" aria-label="Navigate to key sections">
-        <a href="index.html" class="btn btn--primary btn--lg">
+        <a href="/index.html" class="btn btn--primary btn--lg">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
           Go Home
         </a>
-        <a href="academics.html" class="btn btn--ghost btn--lg">Courses</a>
-        <a href="contact.html"   class="btn btn--ghost btn--lg">Contact</a>
+        <a href="/academics.html" class="btn btn--ghost btn--lg">Courses</a>
+        <a href="/contact.html"   class="btn btn--ghost btn--lg">Contact</a>
       </nav>
 
       <div class="e404__divider"></div>
@@ -214,6 +218,6 @@
         <a href="tel:7026386563">7026386563</a>
       </p>
     </div>
-  </div>
+  </main>
 </body>
 </html>
