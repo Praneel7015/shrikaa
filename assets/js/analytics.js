@@ -45,8 +45,6 @@
       track('askshrikaa_click', { link_url: href });
     } else if (href.indexOf('tel:') === 0) {
       track('call_click', { link_url: href });
-    } else if (a.classList.contains('mobile-cta__btn')) {
-      track('mobile_cta_click', { label: a.textContent.trim() });
     }
   }, true);
 })();
