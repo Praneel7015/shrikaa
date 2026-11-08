@@ -338,7 +338,7 @@ body.nav-menu-open .to-top {
   position:absolute; left:0; top:50%; transform:translateY(-50%);
   width:480px; height:480px; pointer-events:none;
   opacity:0.05;
-  background-image: url('../images/logo.png');
+  background-image: url('../images/logo.webp');
   background-size:contain; background-repeat:no-repeat; background-position:center;
   filter: invert(1);
 }
