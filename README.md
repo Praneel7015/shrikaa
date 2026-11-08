@@ -26,8 +26,8 @@ Rebuilt website for **Shrikaa Intellect Innovations**, Bengaluru's affordable co
 
 - Pure HTML5, CSS3, vanilla JavaScript — no frameworks, no build step
 - **Fonts:** DM Serif Display + Inter (Google Fonts) · Samarkhan (local, `assets/fonts/`)
-- **CSS:** `assets/css/main.css` + `assets/css/components.css`
-- **JS:** `nav-footer.js` · `counter.js` · `reveal.js` · `contact.js` · `analytics.js` · `faq.js` · `carousel.js`
+- **CSS:** `assets/css/styles.css`, `header.css`, `footer.css`, and `components.css`
+- **JS:** `header.js` ? `footer.js` · `counter.js` · `reveal.js` · `contact.js` · `analytics.js` · `faq.js` · `carousel.js`
 - **Hosting:** BigRock static (+ `.htaccess` for extensionless URLs)
 - **Forms:** FormSubmit → `askshrikaa@gmail.com`
 - **Analytics:** GA4 optional — set `SHRIKAA_ANALYTICS.ga4` in `assets/js/form-config.js`
