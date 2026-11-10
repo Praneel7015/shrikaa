@@ -1124,3 +1124,90 @@ body::-webkit-scrollbar,
   .program-actions { gap: var(--sp-3); }
   .program-actions .btn { flex: 1 1 100%; }
 }
+
+/* RESPONSIVE VIDEO EMBEDS & PLAYLIST CARDS */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--sp-6);
+  margin-top: var(--sp-8);
+}
+.video-card {
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-xs);
+  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease);
+  display: flex;
+  flex-direction: column;
+}
+.video-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+  border-color: var(--border);
+}
+.video-responsive {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  background: var(--charcoal);
+  overflow: hidden;
+}
+.video-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.video-card__content {
+  padding: var(--sp-6);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.video-card__tag {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: var(--sp-2);
+}
+.video-card__title {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  color: var(--charcoal);
+  margin-bottom: var(--sp-2);
+}
+.video-card__desc {
+  font-size: var(--text-sm);
+  color: var(--text-soft);
+  line-height: 1.6;
+  margin-bottom: var(--sp-4);
+  flex-grow: 1;
+}
+.video-card__actions {
+  display: flex;
+  gap: var(--sp-3);
+  flex-wrap: wrap;
+  align-items: center;
+}
+.rural-banner {
+  background: var(--chalk);
+  border: 1px solid var(--border-light);
+  border-radius: var(--r-md);
+  padding: var(--sp-5) var(--sp-6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  flex-wrap: wrap;
+  margin-top: var(--sp-6);
+}
+@media (max-width: 640px) {
+  .video-grid { grid-template-columns: 1fr; }
+  .video-card__content { padding: var(--sp-4); }
+}

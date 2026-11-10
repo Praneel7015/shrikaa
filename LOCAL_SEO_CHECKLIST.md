@@ -7,15 +7,15 @@ Off-repo / ops tasks for **Shrikaa Intellect Innovations**. Complete after deplo
 | Field | Value |
 |---|---|
 | Name | Shrikaa Intellect Innovations |
-| Address | 276/D, Jayanagar 8th Block, Bengaluru |
-| Phone | 7026386563 (+91 7026386563) |
+| Address | 17A/2571, 1st Main 2nd Cross, Kalyan Nagar, Opp GK Residency, Dharwad - 580007 |
+| Phone | +91 8618348484 |
 | Email | askshrikaa@gmail.com |
 | Website | https://www.shrikaa.co.in |
 | Hours | Mon–Sat 9:00 AM – 6:00 PM; Sunday Closed |
 
 ## Google Business Profile
 
-- [ ] Claim / verify GBP for the Jayanagar address
+- [ ] Claim / verify GBP for the Dharwad office address
 - [ ] Primary category: Tutoring service or Educational institution
 - [ ] Add services: PUC, CET/KCET, NEET, JEE
 - [ ] Upload classroom / result / facade photos

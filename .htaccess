@@ -8,6 +8,12 @@ ErrorDocument 404 /404.html
   RewriteEngine On
   RewriteBase /
 
+  # 301 Redirects for renamed pages
+  RewriteRule ^puc-coaching-jayanagar(\.html)?$ /puc-coaching [R=301,L]
+  RewriteRule ^cet-coaching-bengaluru(\.html)?$ /cet-coaching [R=301,L]
+  RewriteRule ^neet-coaching-bengaluru(\.html)?$ /neet-coaching [R=301,L]
+  RewriteRule ^jee-coaching-bengaluru(\.html)?$ /jee-coaching [R=301,L]
+
   # Force HTTPS (uncomment if SSL is active and host supports it)
   # RewriteCond %{HTTPS} off
   # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
