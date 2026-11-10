@@ -123,7 +123,7 @@
         });
       })
       .catch(function () {
-        showGlobalError('Something went wrong. Please try again or call us at 8618348484.');
+        showGlobalError('Something went wrong. Please try again or call us at +91 8618348484.');
       })
       .finally(function () {
         setLoading(false);

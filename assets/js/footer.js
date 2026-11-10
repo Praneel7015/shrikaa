@@ -10,7 +10,7 @@
               '<img src="/assets/images/logo-cropped-sm.webp" alt="Shrikaa" class="footer__logo-img" width="40" height="40" />' +
               '<span class="footer__logo-text" style="font-family:var(--font-brand);font-weight:400;letter-spacing:0.08em;">Shrikaa</span>' +
             '</div>' +
-            '<p>Affordable, high-quality coaching for 1st &amp; 2nd PUC, CET, NEET, and JEE students in Bengaluru.</p>' +
+            '<p>Affordable, high-quality coaching for 1st &amp; 2nd PUC, CET, NEET, and JEE students.</p>' +
             '<div class="footer__social" aria-label="Social media">' +
               '<a href="https://www.instagram.com/shrikaa_/" class="footer__social-link" target="_blank" rel="noopener" aria-label="Instagram">' +
                 '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg>' +
@@ -36,11 +36,12 @@
           '<div class="footer__col">' +
             '<h4>Programs</h4>' +
             '<nav class="footer__links">' +
-              '<a href="/puc-coaching-jayanagar">PUC Coaching</a>' +
-              '<a href="/cet-coaching-bengaluru">CET Prep</a>' +
-              '<a href="/neet-coaching-bengaluru">NEET Prep</a>' +
-              '<a href="/jee-coaching-bengaluru">JEE Prep</a>' +
+              '<a href="/puc-coaching">PUC Coaching</a>' +
+              '<a href="/cet-coaching">CET Prep</a>' +
+              '<a href="/neet-coaching">NEET Prep</a>' +
+              '<a href="/jee-coaching">JEE Prep</a>' +
               '<a href="/academics#physics">Physics</a>' +
+              '<a href="/academics#chemistry">Chemistry</a>' +
               '<a href="/academics#biology">Biology</a>' +
             '</nav>' +
           '</div>' +
@@ -48,7 +49,7 @@
             '<h4>Contact</h4>' +
             '<address style="font-style:normal;">' +
               '<div class="footer__contact-item"><span>&#9672;</span><span>17A/2571, 1st Main 2nd Cross, Kalyan Nagar, Opp GK Residency, Dharwad - 580007</span></div>' +
-              '<div class="footer__contact-item"><span>&#9990;</span><a href="tel:+918618348484">8618348484</a></div>' +
+              '<div class="footer__contact-item"><span>&#9990;</span><a href="tel:+918618348484">+91 8618348484</a></div>' +
               '<div class="footer__contact-item"><span>&#9993;</span><a href="mailto:askshrikaa@gmail.com">askshrikaa@gmail.com</a></div>' +
             '</address>' +
             '<div style="margin-top:var(--sp-5);">' +

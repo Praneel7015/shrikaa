@@ -37,27 +37,45 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.shrikaa.co.in/neet-coaching-bengaluru</loc>
-    <lastmod>2026-09-20</lastmod>
+    <loc>https://www.shrikaa.co.in/puc-coaching</loc>
+    <lastmod>2026-11-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.shrikaa.co.in/cet-coaching-bengaluru</loc>
-    <lastmod>2026-09-20</lastmod>
+    <loc>https://www.shrikaa.co.in/cet-coaching</loc>
+    <lastmod>2026-11-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.shrikaa.co.in/puc-coaching-jayanagar</loc>
-    <lastmod>2026-09-20</lastmod>
+    <loc>https://www.shrikaa.co.in/neet-coaching</loc>
+    <lastmod>2026-11-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.shrikaa.co.in/jee-coaching-bengaluru</loc>
-    <lastmod>2026-09-20</lastmod>
+    <loc>https://www.shrikaa.co.in/jee-coaching</loc>
+    <lastmod>2026-11-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.shrikaa.co.in/physics</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.shrikaa.co.in/chemistry</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.shrikaa.co.in/biology</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
   </url>
 </urlset>
