@@ -1,20 +1,26 @@
 (function () {
   'use strict';
 
+  var basePath = (function () {
+    var p = window.location.pathname || '';
+    if (p.indexOf('/shrikaa') === 0) return '/shrikaa';
+    return '';
+  })();
+
   var NAV_HTML = function (isLight) {
     return '<nav class="nav' + (isLight ? ' nav--light' : '') + '" id="nav">' +
       '<div class="container nav__inner">' +
-        '<a href="/" class="nav__logo" aria-label="Shrikaa home">' +
-          '<img src="/assets/images/logo-cropped-sm.webp" alt="Shrikaa" class="nav__logo-img" width="48" height="48" />' +
+        '<a href="' + (basePath || '/') + '" class="nav__logo" aria-label="Shrikaa home">' +
+          '<img src="' + basePath + '/assets/images/logo-cropped-sm.webp" alt="Shrikaa" class="nav__logo-img" width="48" height="48" />' +
           '<span class="nav__logo-text">Shrikaa</span>' +
         '</a>' +
         '<div class="nav__links">' +
-          '<a href="/"      class="nav__link" data-page="home">Home</a>' +
-          '<a href="/about"      class="nav__link" data-page="about">About</a>' +
-          '<a href="/academics"  class="nav__link" data-page="academics">Courses</a>' +
-          '<a href="/results"    class="nav__link" data-page="results">Results</a>' +
-          '<a href="/donate"      class="nav__link" data-page="donate">Donate</a>' +
-          '<a href="/contact"    class="nav__link" data-page="contact">Contact</a>' +
+          '<a href="' + (basePath || '') + '/"      class="nav__link" data-page="home">Home</a>' +
+          '<a href="' + basePath + '/about"      class="nav__link" data-page="about">About</a>' +
+          '<a href="' + basePath + '/academics"  class="nav__link" data-page="academics">Courses</a>' +
+          '<a href="' + basePath + '/results"    class="nav__link" data-page="results">Results</a>' +
+          '<a href="' + basePath + '/donate"      class="nav__link" data-page="donate">Donate</a>' +
+          '<a href="' + basePath + '/contact"    class="nav__link" data-page="contact">Contact</a>' +
         '</div>' +
         '<div class="nav__cta">' +
           '<a href="https://www.askshrikaa.com" class="btn btn--white btn--nav-cta" target="_blank" rel="noopener">AskShrikaa</a>' +
@@ -24,12 +30,12 @@
         '</button>' +
       '</div>' +
       '<div class="nav__mobile" id="nav-mobile">' +
-        '<a href="/"      class="nav__mobile-link" data-page="home">Home</a>' +
-        '<a href="/about"      class="nav__mobile-link" data-page="about">About</a>' +
-        '<a href="/academics"  class="nav__mobile-link" data-page="academics">Courses</a>' +
-        '<a href="/results"    class="nav__mobile-link" data-page="results">Results</a>' +
-        '<a href="/donate"      class="nav__mobile-link" data-page="donate">Donate</a>' +
-        '<a href="/contact"    class="nav__mobile-link" data-page="contact">Contact</a>' +
+        '<a href="' + (basePath || '') + '/"      class="nav__mobile-link" data-page="home">Home</a>' +
+        '<a href="' + basePath + '/about"      class="nav__mobile-link" data-page="about">About</a>' +
+        '<a href="' + basePath + '/academics"  class="nav__mobile-link" data-page="academics">Courses</a>' +
+        '<a href="' + basePath + '/results"    class="nav__mobile-link" data-page="results">Results</a>' +
+        '<a href="' + basePath + '/donate"      class="nav__mobile-link" data-page="donate">Donate</a>' +
+        '<a href="' + basePath + '/contact"    class="nav__mobile-link" data-page="contact">Contact</a>' +
         '<a href="https://www.askshrikaa.com" class="btn btn--primary nav__mobile-cta" target="_blank" rel="noopener">AskShrikaa &rarr;</a>' +
       '</div>' +
     '</nav>';
